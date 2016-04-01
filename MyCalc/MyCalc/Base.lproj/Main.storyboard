@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="283" y="506"/>
         </scene>
-        <!--View Controller-->
+        <!--Percent View Controller-->
         <scene sceneID="unn-ar-jrm">
             <objects>
-                <viewController id="YTk-rw-7ya" sceneMemberID="viewController">
+                <viewController id="YTk-rw-7ya" customClass="PercentViewController" customModule="MyCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpw-WJ-IE0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
