@@ -24,6 +24,14 @@ class PercentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let viewController = segue.destinationViewController as! ResultViewController
+        viewController.price = price
+        if let percent = Int(percentField.text!) {
+            viewController.percent = percent
+        }
+    }
+    
     @IBAction func tap1Button(sender: AnyObject) {
         let value = percentField.text! + "1"
         if let percent = Int(value) {
