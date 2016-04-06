@@ -46,5 +46,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todoList.count
+    }
 }
 
