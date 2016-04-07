@@ -50,5 +50,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.count
     }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("todoCell", forIndexPath: indexPath)
+        let todoTitle = todoList[indexPath.row]
+        cell.textLabel!.text = todoTitle
+        return cell
+    }
 }
 

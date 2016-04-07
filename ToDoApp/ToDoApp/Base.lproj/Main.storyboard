@@ -54,9 +54,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tjx-d9-dJ1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MwR-FD-7Ty"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MwR-FD-7Ty">
+                            <connections>
+                                <action selector="tapAddButton:" destination="BYZ-38-t0r" id="VAJ-fh-Cif"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="QUT-Ue-jpB" id="Fzz-nx-YcC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
