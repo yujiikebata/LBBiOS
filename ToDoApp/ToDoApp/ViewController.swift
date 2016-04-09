@@ -41,6 +41,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.todoList.insert(textField.text!, atIndex: 0)
                 
                 self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Right)
+                
+                let userDefaults = NSUserDefaults.standardUserDefaults()
+                userDefaults.setObject(self.todoList, forKey: "todoList")
+                userDefaults.synchronize()
             }
         }
         
