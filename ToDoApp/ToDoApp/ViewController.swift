@@ -16,7 +16,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // load user data
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let storedTodoList = userDefaults.arrayForKey("todoList") as? [String] {
+            todoList.appendContentsOf(storedTodoList)
+        }
     }
 
     override func didReceiveMemoryWarning() {
