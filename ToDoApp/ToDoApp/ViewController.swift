@@ -66,5 +66,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel!.text = todoTitle
         return cell
     }
+    
+    class MyTodo: NSObject, NSCoding {
+        var todoTitle: String?
+        var todoDone: Bool = false
+        
+        override init() {
+            
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            todoTitle = aDecoder.decodeObjectForKey("todoTitle") as? String
+            todoDone = aDecoder.decodeBoolForKey("todoDone")
+        }
+        
+        func encodeWithCoder(aCoder: NSCoder) {
+            aCoder.encodeObject(todoTitle, forKey: "todoTitle")
+            aCoder.encodeBool(todoDone, forKey: "todoDone")
+        }
+    }
 }
 
