@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var todoList = [String]()
+    var todoList = [MyTodo]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,8 +19,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // load user data
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        if let storedTodoList = userDefaults.arrayForKey("todoList") as? [String] {
-            todoList.appendContentsOf(storedTodoList)
+        if let todoListData = userDefaults.objectForKey("todoList") as? NSData {
+            if let storedTodoList = NSKeyedUnarchiver.unarchiveObjectWithData(todoListData) as? [MyTodo] {
+                todoList.appendContentsOf(storedTodoList)
+            }
         }
     }
 
@@ -38,12 +40,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
             (action: UIAlertAction) -> Void in
             if let textField = alertController.textFields?.first {
-                self.todoList.insert(textField.text!, atIndex: 0)
+                let myTodo = MyTodo()
+                myTodo.todoTitle = textField.text
+                self.todoList.insert(myTodo, atIndex: 0)
                 
                 self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Right)
                 
+                let data: NSData = NSKeyedArchiver.archivedDataWithRootObject(self.todoList);
+                
                 let userDefaults = NSUserDefaults.standardUserDefaults()
-                userDefaults.setObject(self.todoList, forKey: "todoList")
+                userDefaults.setObject(data, forKey: "todoList")
                 userDefaults.synchronize()
             }
         }
@@ -62,9 +68,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("todoCell", forIndexPath: indexPath)
-        let todoTitle = todoList[indexPath.row]
-        cell.textLabel!.text = todoTitle
+        let todo = todoList[indexPath.row]
+        cell.textLabel!.text = todo.todoTitle
+        if todo.todoDone {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryType.None
+        }
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let todo = todoList[indexPath.row]
+        if todo.todoDone {
+            todo.todoDone = false
+        } else {
+            todo.todoDone = true
+        }
+        
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade);
+        
+        let data: NSData = NSKeyedArchiver.archivedDataWithRootObject(todoList)
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(data, forKey: "todoList")
+        userDefaults.synchronize()
     }
     
     class MyTodo: NSObject, NSCoding {
