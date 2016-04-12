@@ -41,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             (action: UIAlertAction) -> Void in
             if let textField = alertController.textFields?.first {
                 let myTodo = MyTodo()
+                print(self)
                 myTodo.todoTitle = textField.text
                 self.todoList.insert(myTodo, atIndex: 0)
                 
@@ -93,6 +94,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setObject(data, forKey: "todoList")
         userDefaults.synchronize()
+    }
+    
+    // can edit each cell
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    // edit cell
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // delete item from todoList
+            todoList.removeAtIndex(indexPath.row)
+            // delete item from table view
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            // save data
+            let data: NSData = NSKeyedArchiver.archivedDataWithRootObject(todoList)
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            userDefaults.setObject(data, forKey: "todoList")
+            userDefaults.synchronize()
+        }
     }
     
     class MyTodo: NSObject, NSCoding {
