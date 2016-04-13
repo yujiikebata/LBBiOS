@@ -20,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAZ-zr-FLQ">
                                 <rect key="frame" x="200" y="104" width="200" height="30"/>
                                 <state key="normal" title="System"/>
+                                <connections>
+                                    <action selector="tapSystemSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yiJ-eL-M5E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maw-CE-M9P">
                                 <rect key="frame" x="273" y="285" width="54" height="30"/>

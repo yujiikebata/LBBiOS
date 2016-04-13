@@ -21,6 +21,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func tapSystemSound(sender: AnyObject) {
+        AudioServicesPlaySystemSoundWithCompletion(1000) {
+            () -> Void in
+            
+        }
+    }
 
 }
 
