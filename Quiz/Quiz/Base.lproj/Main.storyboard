@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maw-CE-M9P">
                                 <rect key="frame" x="273" y="285" width="54" height="30"/>
                                 <state key="normal" title="Custom"/>
+                                <connections>
+                                    <action selector="tabCustomSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qlA-Zd-Yc9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCx-5Y-ars">
                                 <rect key="frame" x="269" y="486" width="62" height="30"/>

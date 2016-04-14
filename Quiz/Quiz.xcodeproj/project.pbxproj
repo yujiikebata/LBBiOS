@@ -13,6 +13,7 @@
 		E75FAD191CBE80BE0093406E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75FAD181CBE80BE0093406E /* Assets.xcassets */; };
 		E75FAD1C1CBE80BE0093406E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75FAD1A1CBE80BE0093406E /* LaunchScreen.storyboard */; };
 		E75FAD241CBE812C0093406E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75FAD231CBE812C0093406E /* AudioToolbox.framework */; };
+		E798392E1CBFCCEB00F3809A /* custom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E798392D1CBFCCEB00F3809A /* custom.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E75FAD1B1CBE80BE0093406E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E75FAD1D1CBE80BE0093406E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E75FAD231CBE812C0093406E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E798392D1CBFCCEB00F3809A /* custom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = custom.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		E75FAD101CBE80BE0093406E /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				E798392D1CBFCCEB00F3809A /* custom.mp3 */,
 				E75FAD111CBE80BE0093406E /* AppDelegate.swift */,
 				E75FAD131CBE80BE0093406E /* ViewController.swift */,
 				E75FAD151CBE80BE0093406E /* Main.storyboard */,
@@ -130,6 +133,7 @@
 				E75FAD1C1CBE80BE0093406E /* LaunchScreen.storyboard in Resources */,
 				E75FAD191CBE80BE0093406E /* Assets.xcassets in Resources */,
 				E75FAD171CBE80BE0093406E /* Main.storyboard in Resources */,
+				E798392E1CBFCCEB00F3809A /* custom.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +297,7 @@
 				E75FAD221CBE80BE0093406E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

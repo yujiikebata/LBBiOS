@@ -28,5 +28,14 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func tabCustomSound(sender: AnyObject) {
+        var soundId: SystemSoundID = 0
+        if let soundUrl = NSBundle.mainBundle().URLForResource("custom", withExtension: "mp3") {
+            AudioServicesCreateSystemSoundID(soundUrl, &soundId)
+            AudioServicesPlaySystemSoundWithCompletion(soundId, { () -> Void in
+                // some code...
+            })
+        }
+    }
 }
 
