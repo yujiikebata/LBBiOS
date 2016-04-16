@@ -37,5 +37,11 @@ class ViewController: UIViewController {
             })
         }
     }
+    
+    @IBAction func tapVibration(sender: AnyObject) {
+        AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate) {
+            () -> Void in
+        }
+    }
 }
 

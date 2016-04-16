@@ -34,6 +34,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCx-5Y-ars">
                                 <rect key="frame" x="269" y="486" width="62" height="30"/>
                                 <state key="normal" title="Vibration"/>
+                                <connections>
+                                    <action selector="tapVibration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dzs-Rk-t0D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
