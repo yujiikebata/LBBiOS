@@ -24,6 +24,14 @@ class ViewController: UIViewController {
 
 
     @IBAction func tapStartButton(sender: AnyObject) {
+        let animation = CABasicAnimation(keyPath: "cornerRaius")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+        animation.fromValue = 0
+        animation.toValue = 20
+        animation.duration = 1
+        
+        targetView.layer.addAnimation(animation, forKey: "cornerRadius")
+        targetView.layer.cornerRadius = 20
     }
 }
 
