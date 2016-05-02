@@ -65,6 +65,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="Jo8-kC-k1t">
+                                <rect key="frame" x="86.5" y="233.5" width="201" height="201"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="LXN-oN-ESa">
+                                <rect key="frame" x="86" y="233" width="202" height="202"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WTM-ww-qEp">
                                 <rect key="frame" x="20" y="80" width="335" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,9 +134,13 @@
                             <constraint firstItem="WTM-ww-qEp" firstAttribute="centerX" secondItem="F6L-h8-r7G" secondAttribute="centerX" id="Xtr-uh-WaX"/>
                             <constraint firstItem="WTM-ww-qEp" firstAttribute="leading" secondItem="k5U-aM-Rpv" secondAttribute="leading" id="YEf-bw-7NP"/>
                             <constraint firstItem="vr4-4d-90k" firstAttribute="top" secondItem="Sr7-9V-5XJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fIk-qU-lD9"/>
+                            <constraint firstItem="LXN-oN-ESa" firstAttribute="centerY" secondItem="F6L-h8-r7G" secondAttribute="centerY" id="gvy-rQ-sLR"/>
                             <constraint firstItem="WTM-ww-qEp" firstAttribute="top" secondItem="vr4-4d-90k" secondAttribute="bottom" constant="31" id="kC7-HW-ySF"/>
                             <constraint firstItem="vr4-4d-90k" firstAttribute="leading" secondItem="WTM-ww-qEp" secondAttribute="leading" id="lIm-rx-xAI"/>
                             <constraint firstAttribute="bottom" secondItem="k5U-aM-Rpv" secondAttribute="bottom" constant="20" symbolic="YES" id="lcW-Sk-bLL"/>
+                            <constraint firstItem="Jo8-kC-k1t" firstAttribute="centerY" secondItem="F6L-h8-r7G" secondAttribute="centerY" id="ujx-XP-1MV"/>
+                            <constraint firstItem="LXN-oN-ESa" firstAttribute="centerX" secondItem="F6L-h8-r7G" secondAttribute="centerX" id="uni-M6-3zk"/>
+                            <constraint firstItem="Jo8-kC-k1t" firstAttribute="centerX" secondItem="F6L-h8-r7G" secondAttribute="centerX" id="xwO-8z-xtD"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -140,4 +150,8 @@
             <point key="canvasLocation" x="744.5" y="537.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="correct" width="202" height="202"/>
+        <image name="incorrect" width="201" height="201"/>
+    </resources>
 </document>
