@@ -39,3 +39,7 @@ class QuestionData {
         return false
     }
 }
+
+class QuestionDataManager {
+    static let sharedInstance = QuestionDataManager()
+}
