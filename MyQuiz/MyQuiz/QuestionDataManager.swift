@@ -42,4 +42,40 @@ class QuestionData {
 
 class QuestionDataManager {
     static let sharedInstance = QuestionDataManager()
+    
+    var questionDataArray = [QuestionData]()
+    var nowQuestionIndex: Int = 0
+    
+    private init() {
+        
+    }
+    
+    func loadQuestion() {
+        questionDataArray.removeAll()
+        nowQuestionIndex = 0
+        
+        if let csvFilePath = NSBundle.mainBundle().pathForResource("question", ofType: "csv") {
+            do {
+                if let csvStringData: String = try String(contentsOfFile: csvFilePath, encoding: NSUTF8StringEncoding) {
+                        csvStringData.enumerateLines({ (line, stop) -> () in
+                            let questionSourceDataArray = line.componentsSeparatedByString(",")
+                            let questionData = QuestionData(questionSourceDataArray: questionSourceDataArray)
+                            self.questionDataArray.append(questionData)
+                            questionData.questionNo = self.questionDataArray.count
+                    })
+                }
+            } catch let error {
+                print(error)
+            }
+        }
+    }
+        
+    func nextQuestion() -> QuestionData? {
+        if nowQuestionIndex < questionDataArray.count {
+            let nextQuestion = questionDataArray[nowQuestionIndex]
+            nowQuestionIndex += 1
+            return nextQuestion
+        }
+        return nil
+    }
 }
