@@ -57,6 +57,45 @@ class QuestionViewController: UIViewController {
         questionData.userChoiceAnswerNumber = 4
         goNextQuestionWithAnimation()
     }
+
+    func goNextQuestionWithAnimation() {
+        if questionData.isCorrect() {
+            goNextQuestionWithCorrectAnimation()
+        } else {
+            goNextQuestionWithIncorrectAnimation()
+        }
+    }
     
+    func goNextQuestionWithCorrectAnimation() {
+        AudioServicesPlayAlertSoundWithCompletion(1025, nil)
+        
+        UIView.animateWithDuration(2.0, animations: { () -> Void in
+            self.correctImageView.alpha = 1.0
+            }, completion: { (Bool) -> Void in
+                self.goNextQuestion()
+        })
+    }
     
+    func goNextQuestionWithIncorrectAnimation() {
+        AudioServicesPlayAlertSoundWithCompletion(1026, nil)
+        
+        UIView.animateWithDuration(2.0, animations: { () -> Void in
+            self.incorrectImageView.alpha = 1.0
+            }, completion: { (Bool) -> Void in
+                self.goNextQuestion()
+        })
+    }
+    
+    func goNextQuestion() {
+        if let nextQuestion = QuestionDataManager.sharedInstance.nextQuestion() {
+            if let nextQuestionViewController = storyboard?.instantiateViewControllerWithIdentifier("question") as? QuestionViewController {
+                nextQuestionViewController.questionData = nextQuestion
+                self.presentViewController(nextQuestionViewController, animated: true, completion: nil)
+            }
+        } else {
+            if let resultViewController = storyboard?.instantiateViewControllerWithIdentifier("result") as? ResultViewController {
+                self.presentViewController(resultViewController, animated: true, completion: nil)
+            }
+        }
+    }
 }
