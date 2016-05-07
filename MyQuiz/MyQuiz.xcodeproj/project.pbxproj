@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E7A6FF5E1CDDCE93000DB4EB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A6FF5D1CDDCE93000DB4EB /* StartViewController.swift */; };
+		E7A6FF601CDDD031000DB4EB /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A6FF5F1CDDD031000DB4EB /* QuestionViewController.swift */; };
 		E7C42F251CD773A800263BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C42F241CD773A800263BC0 /* AppDelegate.swift */; };
 		E7C42F271CD773A800263BC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C42F261CD773A800263BC0 /* ViewController.swift */; };
 		E7C42F2A1CD773A800263BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C42F281CD773A800263BC0 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		E7A6FF5D1CDDCE93000DB4EB /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		E7A6FF5F1CDDD031000DB4EB /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		E7C42F211CD773A800263BC0 /* MyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C42F241CD773A800263BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C42F261CD773A800263BC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				E7C42F241CD773A800263BC0 /* AppDelegate.swift */,
 				E7A6FF5D1CDDCE93000DB4EB /* StartViewController.swift */,
+				E7A6FF5F1CDDD031000DB4EB /* QuestionViewController.swift */,
 				E7C42F261CD773A800263BC0 /* ViewController.swift */,
 				E7C42F281CD773A800263BC0 /* Main.storyboard */,
 				E7C42F2B1CD773A800263BC0 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C42F271CD773A800263BC0 /* ViewController.swift in Sources */,
+				E7A6FF601CDDD031000DB4EB /* QuestionViewController.swift in Sources */,
 				E7A6FF5E1CDDCE93000DB4EB /* StartViewController.swift in Sources */,
 				E7C42F251CD773A800263BC0 /* AppDelegate.swift in Sources */,
 				E7C42F391CD7830800263BC0 /* QuestionDataManager.swift in Sources */,

@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="349.5" y="537.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="4Xc-m2-mLw">
             <objects>
-                <viewController storyboardIdentifier="question" id="v4y-DR-8Am" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" id="v4y-DR-8Am" customClass="QuestionViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sr7-9V-5XJ"/>
                         <viewControllerLayoutGuide type="bottom" id="itV-F7-V4p"/>
@@ -95,6 +95,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer1Button:" destination="v4y-DR-8Am" eventType="touchUpInside" id="u4H-vr-FIE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r70-JN-k7P">
                                         <rect key="frame" x="0.0" y="109" width="335" height="99"/>
@@ -103,6 +106,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer2Button:" destination="v4y-DR-8Am" eventType="touchUpInside" id="Rce-zU-lBn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64S-Wr-SAX">
                                         <rect key="frame" x="0.0" y="217" width="335" height="98"/>
@@ -111,6 +117,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer3Button:" destination="v4y-DR-8Am" eventType="touchUpInside" id="ewK-x3-XtX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cW-HU-GJK">
                                         <rect key="frame" x="0.0" y="325" width="335" height="99"/>
@@ -119,6 +128,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer4Button:" destination="v4y-DR-8Am" eventType="touchUpInside" id="CPI-Np-T4b"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -147,6 +159,16 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="answer1Button" destination="viT-HF-9g5" id="cjW-eV-gfW"/>
+                        <outlet property="answer2Button" destination="r70-JN-k7P" id="mcq-v0-pKI"/>
+                        <outlet property="answer3Button" destination="64S-Wr-SAX" id="iV5-SV-ki3"/>
+                        <outlet property="answer4Button" destination="9cW-HU-GJK" id="XGS-9a-HzY"/>
+                        <outlet property="correctImageView" destination="LXN-oN-ESa" id="3fq-2y-vDU"/>
+                        <outlet property="incorrectImageView" destination="Jo8-kC-k1t" id="ctW-S8-DyK"/>
+                        <outlet property="questionLabel" destination="vr4-4d-90k" id="nUF-ZX-cuI"/>
+                        <outlet property="questionTextView" destination="WTM-ww-qEp" id="yb6-oD-Mgo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWd-U7-hhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
