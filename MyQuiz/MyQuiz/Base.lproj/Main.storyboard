@@ -174,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="744.5" y="537.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="oeG-ma-aAu">
             <objects>
-                <viewController storyboardIdentifier="result" id="ow7-T7-lEn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" id="ow7-T7-lEn" customClass="ResultViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yX6-UF-lZJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Lxf-X4-u7l"/>
@@ -216,6 +216,9 @@
                                 <state key="normal" title="back to start">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="kLJ-tv-7AR" kind="unwind" unwindAction="goToTitle:" id="Xab-uc-jpA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,10 +232,14 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="correctPercentLabel" destination="cM8-uI-BIb" id="bYV-xK-1aH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fd9-GQ-DEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kLJ-tv-7AR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1141.5" y="537.5"/>
+            <point key="canvasLocation" x="1133.5" y="537.5"/>
         </scene>
     </scenes>
     <resources>

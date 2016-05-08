@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E773E10B1CDEFC5E00BC1839 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E10A1CDEFC5E00BC1839 /* ResultViewController.swift */; };
 		E7A6FF5E1CDDCE93000DB4EB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A6FF5D1CDDCE93000DB4EB /* StartViewController.swift */; };
 		E7A6FF601CDDD031000DB4EB /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A6FF5F1CDDD031000DB4EB /* QuestionViewController.swift */; };
 		E7C42F251CD773A800263BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C42F241CD773A800263BC0 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E773E10A1CDEFC5E00BC1839 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E7A6FF5D1CDDCE93000DB4EB /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		E7A6FF5F1CDDD031000DB4EB /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		E7C42F211CD773A800263BC0 /* MyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 				E7C42F241CD773A800263BC0 /* AppDelegate.swift */,
 				E7A6FF5D1CDDCE93000DB4EB /* StartViewController.swift */,
 				E7A6FF5F1CDDD031000DB4EB /* QuestionViewController.swift */,
+				E773E10A1CDEFC5E00BC1839 /* ResultViewController.swift */,
 				E7C42F261CD773A800263BC0 /* ViewController.swift */,
 				E7C42F281CD773A800263BC0 /* Main.storyboard */,
 				E7C42F2B1CD773A800263BC0 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 				E7A6FF5E1CDDCE93000DB4EB /* StartViewController.swift in Sources */,
 				E7C42F251CD773A800263BC0 /* AppDelegate.swift in Sources */,
 				E7C42F391CD7830800263BC0 /* QuestionDataManager.swift in Sources */,
+				E773E10B1CDEFC5E00BC1839 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
